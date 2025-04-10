@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #fff0f5;
+  overflow: hidden;
+}
+
+.petal {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: -50px;
+  animation: fall 3s ease-in forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    top: 50vh;
+    opacity: 0.8;
+  }
+}
+
+.heart-petal {
+  position: absolute;
+  transition: all 1s ease-out;
+}
+
+.hover-heart:hover {
+  filter: drop-shadow(0 0 10px red) brightness(1.2);
+  transform: scale(1.05);
+}
+body {
+  background: linear-gradient(-45deg, #fdf3f6, #ffe0ec, #fff1f5, #fde8f0);
+  background-size: 400% 400%;
+  animation: backgroundShift 15s ease infinite;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+#message {
+  position: absolute;
+  top: 7%;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Cursive', sans-serif;
+  color: #c2185b;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 6s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.heart-float {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('small-heart.png') no-repeat center/contain;
+  top: 100vh;
+  animation: floatUp 10s linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(0.5); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+}
+
+
+
